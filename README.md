@@ -1,6 +1,6 @@
 # A react, redux saga with typescript.
 
-##Motivation
+## Motivation
 
 We have received many things from the open-source community this is just an attempt to contribute something back. Aim was to create a simple project with all the basic stuff that most applications need. For example, 
 1. Navigation/Routers
@@ -14,7 +14,7 @@ We have received many things from the open-source community this is just an atte
 
 So this project contains all of the above mentioned items and few others
 
-##What it contains?
+## What it contains?
 
 A simple react typescript project with react-redux and saga configured with connected-router, react-router, and a bunch of exciting libraries. Some of them are listed below
 1. [Connected react router](https://github.com/supasate/connected-react-router) This helps you to navigate/update route from anywhere be it saga or action and also maintains all activity inside state, which helps in tracking the page changes and grab other navigation related information
@@ -54,7 +54,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-##Contributing
+## Contributing
 
 If you find something which doesn't make sense or something doesn't seem right, 
 please make a pull request and please add valid and well reasoned explanations about your 
