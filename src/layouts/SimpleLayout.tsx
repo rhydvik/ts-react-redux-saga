@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactChildren } from 'react';
 
 type Props = {
-  children: any;
+  children: ReactChildren;
 };
 
 const SimpleLayout = ({ children }: Props) => {
