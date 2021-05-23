@@ -28,14 +28,16 @@ const SignIn = () => {
     <div>
       <h3>sign in</h3>
       <div className={styles.container}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input {...register('email')} />
+        <form onSubmit={handleSubmit(onSubmit)} data-testid="signInForm">
+          <input {...register('email')} data-testid="email" />
           <p>{errors.email?.message}</p>
 
-          <input {...register('password')} type="password" />
+          <input {...register('password')} type="password" data-testid="password" />
           <p>{errors.password?.message}</p>
 
-          <button type="submit">{isLoading ? 'Loading...' : 'Sign In'}</button>
+          <button data-testid="submit" type="submit">
+            {isLoading ? 'Loading...' : 'Sign In'}
+          </button>
         </form>
         <br />
         <Link to="/">Go to Dashboard</Link>
