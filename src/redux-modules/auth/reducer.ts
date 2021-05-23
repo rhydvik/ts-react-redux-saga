@@ -1,7 +1,7 @@
 import { USER_LOGIN_COMPLETE, USER_LOGIN } from './Actions';
 import { AuthAction, AuthState } from './Types';
 
-const initialState: AuthState = {
+export const authInitialState: AuthState = {
   user: {
     name: '',
   },
@@ -9,7 +9,7 @@ const initialState: AuthState = {
   loggedIn: false,
 };
 
-export default (state = initialState, action: AuthAction) => {
+export default (state = authInitialState, action: AuthAction) => {
   const { type } = action;
   switch (type) {
     case USER_LOGIN:

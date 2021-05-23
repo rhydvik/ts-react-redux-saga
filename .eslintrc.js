@@ -12,6 +12,9 @@ module.exports = {
       version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
     },
   },
+  env: {
+    jest: true,
+  },
   extends: [
     'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from @typescript-eslint/eslint-plugin
@@ -58,15 +61,6 @@ module.exports = {
       },
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    // '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-explicit-any': 0,
   },
-  // overrides: [
-  //   {
-  //     // enable the rule specifically for TypeScript files
-  //     files: ['*.ts', '*.tsx'],
-  //     rules: {
-  //       '@typescript-eslint/explicit-module-boundary-types': ['error'],
-  //     },
-  //   },
-  // ],
 };
