@@ -1,5 +1,3 @@
-import { string } from 'yup/lib/locale';
-
 import { authInitialState } from '../auth/reducer';
 import { RootState } from './rootState';
 

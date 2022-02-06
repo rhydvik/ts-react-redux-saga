@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+// import { routerMiddleware } from 'connected-react-router';
 
 import rootSaga from './rootSaga';
 import rootReducer from './rootReducer';
@@ -13,6 +14,7 @@ declare global {
 }
 
 const sagaMiddleware = createSagaMiddleware();
+// eslint-disable-next-line no-undef
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // redux sagas is a middleware that we apply to the store

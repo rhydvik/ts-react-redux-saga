@@ -1,7 +1,8 @@
 export interface IRoute {
   path: string;
-  component: any;
+  element: any;
   layout: any;
+  exact?: boolean;
 }
 
 export interface ISignInModal {

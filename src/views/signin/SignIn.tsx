@@ -15,7 +15,7 @@ const SignIn = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<ISignInModal>({
     resolver: yupResolver(signInSchema),
   });
   const dispatch = useDispatch();

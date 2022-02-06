@@ -1,27 +1,23 @@
 import React from 'react';
-import { Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, useRoutes, RouteObject } from 'react-router-dom';
 
 import { SignInRoute } from './views/signin/Routes';
-import { IRoute } from './common/Types';
-import PublicRouteWrapper from './layouts/PublicRouteWrapper';
 import { DashboardRoute } from './views/dashboard/Routes';
-import AuthenticatedRouteWrapper from './layouts/AuthenticatedRouteWrapper';
+import { NotFoundRoutes } from './views/not-found/Routes';
+import { createRoutes } from './common/utils/routeUtils';
 
-const Routes = () => {
-  const PublicRoutes = [SignInRoute];
-  const AuthenticatedRoute = [DashboardRoute];
+const PublicRoutes = [SignInRoute, NotFoundRoutes];
+const ProtectedRoutes = [DashboardRoute];
 
-  return (
-    <Switch>
-      {PublicRoutes.map((route: IRoute, index: number) => (
-        <PublicRouteWrapper key={`public-route-wrapper-${index}`} {...route} />
-      ))}
-      {AuthenticatedRoute.map((route: IRoute, index: number) => (
-        <AuthenticatedRouteWrapper key={`public-route-wrapper-${index}`} {...route} />
-      ))}
-      <Redirect to="/not-found" />
-    </Switch>
-  );
+const App = () => {
+  const appRoutes: RouteObject[] = createRoutes({ PublicRoutes, ProtectedRoutes }, false);
+  return useRoutes(appRoutes);
 };
 
-export default Routes;
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;

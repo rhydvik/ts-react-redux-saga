@@ -1,10 +1,9 @@
 import { IRoute } from '../../common/Types';
 import SimpleLayout from '../../layouts/SimpleLayout';
-import Dashboard from './Dashboard';
+import NotFound from './NotFound';
 
-export const DashboardRoute: IRoute = {
-  path: '/',
-  exact: true,
-  element: Dashboard,
+export const NotFoundRoutes: IRoute = {
+  path: '*',
+  element: NotFound,
   layout: SimpleLayout,
 };

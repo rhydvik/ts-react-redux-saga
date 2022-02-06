@@ -27,8 +27,9 @@ const logRequest = (request: AxiosRequestConfig) => {
 };
 
 const handleSecureRequest = async (config: AxiosRequestConfig) => {
-  const { headers } = config;
+  const { headers = {} } = config;
   // eslint-disable-next-line no-undef
+  // @ts-ignore
   headers['X-Api-Key'] = process.env.REACT_APP_REPAIR_SEARCH_API_KEY;
   headers['Content-Type'] = 'application/json';
   logRequest(config);
@@ -59,6 +60,7 @@ secureApi.interceptors.request.use(handleSecureRequest, handleRequestError);
 secureApi.interceptors.response.use(handleResponse, handleResponseError);
 
 const handleAuthRequest = (config: AxiosRequestConfig) => {
+  // @ts-ignore
   config.headers['Content-Type'] = 'application/json; multipart/form-data; charset=utf-8';
   logRequest(config);
   return config;
