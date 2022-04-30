@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import Button from '@mui/material/Button';
+import { loginUser } from 'redux-modules/auth/Actions';
+import { ISignInModal } from 'common/Types';
+import { RootState } from 'redux-modules/store/rootState';
 
-import { loginUser } from '../../redux-modules/auth/Actions';
 import { signInSchema } from './validation';
-import { ISignInModal } from '../../common/Types';
 import styles from './styles.module.scss';
-import { RootState } from '../../redux-modules/store/rootState';
 
 const SignIn = () => {
   const {

@@ -1,7 +1,6 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Drawer, Box } from '@mui/material';
-
-import Sidebar from '../components/sidebar';
+import { Sidebar } from 'components';
 
 type Props = {
   children: ReactNode;

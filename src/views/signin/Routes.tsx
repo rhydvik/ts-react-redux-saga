@@ -1,6 +1,7 @@
-import { IRoute } from '../../common/Types';
+import { IRoute } from 'common/Types';
+import SimpleLayout from 'layouts/SimpleLayout';
+
 import SignIn from './SignIn';
-import SimpleLayout from '../../layouts/SimpleLayout';
 
 export const SignInRoute: IRoute = {
   exact: true,

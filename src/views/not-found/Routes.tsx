@@ -1,5 +1,6 @@
-import { IRoute } from '../../common/Types';
-import SimpleLayout from '../../layouts/SimpleLayout';
+import { IRoute } from 'common/Types';
+import SimpleLayout from 'layouts/SimpleLayout';
+
 import NotFound from './NotFound';
 
 export const NotFoundRoutes: IRoute = {

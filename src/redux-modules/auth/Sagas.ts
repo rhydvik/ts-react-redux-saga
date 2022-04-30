@@ -1,8 +1,8 @@
 import { takeLatest, put, delay } from 'redux-saga/effects';
+import { ISagaAction, ISignInModal } from 'common/Types';
+import history from 'common/utils/history';
 
 import { USER_LOGIN_LOADING, USER_LOGIN_COMPLETE, USER_LOGIN } from './Actions';
-import { ISagaAction, ISignInModal } from '../../common/Types';
-import history from '../../common/utils/history';
 
 function* loginUser(payload: ISagaAction<ISignInModal>) {
   console.log(payload, 'data'); // eslint-disable-line

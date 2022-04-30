@@ -29,7 +29,6 @@ module.exports = {
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-    'react/jsx-uses-react': 1,
     'import/export': 0,
     'prettier/prettier': [
       'error',
@@ -45,6 +44,8 @@ module.exports = {
     'react/no-unescaped-entities': 0,
     'no-extra-boolean-cast': 0,
     'no-unused-vars': 0,
+    'import/no-unresolved': 0,
+    'react/react-in-jsx-scope': 0,
     'import/order': [
       'error',
       {
