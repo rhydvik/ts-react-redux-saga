@@ -6,12 +6,12 @@ import history from '../../common/utils/history';
 
 function* loginUser(payload: ISagaAction<ISignInModal>) {
   console.log(payload, 'data'); // eslint-disable-line
-	yield put({ type: USER_LOGIN_LOADING });
-	yield delay(3000); // instead of this you can make an api call
-	yield put({ type: USER_LOGIN_COMPLETE });
-	history.push('/');
+  yield put({ type: USER_LOGIN_LOADING });
+  yield delay(3000); // instead of this you can make an api call
+  yield put({ type: USER_LOGIN_COMPLETE });
+  history.push('/');
 }
 
 export default function* authSagas() {
-	yield takeLatest(USER_LOGIN, loginUser);
+  yield takeLatest(USER_LOGIN, loginUser);
 }

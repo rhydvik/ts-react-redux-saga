@@ -1,10 +1,10 @@
 import { IRoute } from '../../common/Types';
-import SimpleLayout from '../../layouts/SimpleLayout';
 import Dashboard from './Dashboard';
+import MainLayout from '../../layouts/MainLayout';
 
 export const DashboardRoute: IRoute = {
-	path: '/',
-	exact: true,
-	element: Dashboard,
-	layout: SimpleLayout,
+  path: '/',
+  exact: true,
+  element: Dashboard,
+  layout: MainLayout,
 };

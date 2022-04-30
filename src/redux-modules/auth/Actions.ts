@@ -5,8 +5,8 @@ export const USER_LOGIN_COMPLETE = 'user/USER-LOGIN-COMPLETE';
 export const USER_LOGIN_LOADING = 'user/USER-LOGIN-LOADING';
 
 export const loginUser = (payload: ISignInModal) => {
-	return {
-		type: USER_LOGIN,
-		payload,
-	};
+  return {
+    type: USER_LOGIN,
+    payload,
+  };
 };

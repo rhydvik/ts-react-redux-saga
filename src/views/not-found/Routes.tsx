@@ -3,7 +3,7 @@ import SimpleLayout from '../../layouts/SimpleLayout';
 import NotFound from './NotFound';
 
 export const NotFoundRoutes: IRoute = {
-	path: '*',
-	element: NotFound,
-	layout: SimpleLayout,
+  path: '*',
+  element: NotFound,
+  layout: SimpleLayout,
 };

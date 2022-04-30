@@ -19,7 +19,10 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // redux sagas is a middleware that we apply to the store
 export const configStore = (): StoreConfig => {
-	const store = createStore(rootReducer(history), composeEnhancers(applyMiddleware(sagaMiddleware)));
-	sagaMiddleware.run(rootSaga);
-	return { store };
+  const store = createStore(
+    rootReducer(history),
+    composeEnhancers(applyMiddleware(sagaMiddleware)),
+  );
+  sagaMiddleware.run(rootSaga);
+  return { store };
 };

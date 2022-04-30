@@ -1,5 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, useRoutes, RouteObject } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  useRoutes,
+  RouteObject,
+} from 'react-router-dom';
 
 import { SignInRoute } from './views/signin/Routes';
 import { DashboardRoute } from './views/dashboard/Routes';
@@ -10,14 +14,17 @@ const PublicRoutes = [SignInRoute, NotFoundRoutes];
 const ProtectedRoutes = [DashboardRoute];
 
 const App = () => {
-	const appRoutes: RouteObject[] = createRoutes({ PublicRoutes, ProtectedRoutes }, false);
-	return useRoutes(appRoutes);
+  const appRoutes: RouteObject[] = createRoutes(
+    { PublicRoutes, ProtectedRoutes },
+    true,
+  );
+  return useRoutes(appRoutes);
 };
 
 const AppWrapper = () => (
-	<Router>
-		<App />
-	</Router>
+  <Router>
+    <App />
+  </Router>
 );
 
 export default AppWrapper;

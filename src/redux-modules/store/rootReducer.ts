@@ -6,11 +6,11 @@ import { AuthReducer } from '../auth';
 
 // create a root reducer
 const rootReducer = (history: History) =>
-	combineReducers({
-		Auth: AuthReducer,
+  combineReducers({
+    Auth: AuthReducer,
 
-		// for connected router
-		router: connectRouter(history),
-	});
+    // for connected router
+    router: connectRouter(history),
+  });
 
 export default rootReducer;
