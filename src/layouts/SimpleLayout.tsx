@@ -5,7 +5,7 @@ type Props = {
 };
 
 const SimpleLayout = ({ children }: Props) => {
-  return <div>{children}</div>;
+	return <div>{children}</div>;
 };
 
 export default SimpleLayout;

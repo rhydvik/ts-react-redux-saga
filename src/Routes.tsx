@@ -10,14 +10,14 @@ const PublicRoutes = [SignInRoute, NotFoundRoutes];
 const ProtectedRoutes = [DashboardRoute];
 
 const App = () => {
-  const appRoutes: RouteObject[] = createRoutes({ PublicRoutes, ProtectedRoutes }, false);
-  return useRoutes(appRoutes);
+	const appRoutes: RouteObject[] = createRoutes({ PublicRoutes, ProtectedRoutes }, false);
+	return useRoutes(appRoutes);
 };
 
 const AppWrapper = () => (
-  <Router>
-    <App />
-  </Router>
+	<Router>
+		<App />
+	</Router>
 );
 
 export default AppWrapper;
