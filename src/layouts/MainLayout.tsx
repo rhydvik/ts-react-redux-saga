@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 import { Drawer, Box } from '@mui/material';
 
+import Sidebar from '../components/sidebar';
+
 type Props = {
   children: ReactNode;
 };
@@ -20,12 +22,13 @@ const MainLayout = ({ children }: Props) => {
             boxSizing: 'border-box',
           },
         }}
+        PaperProps={{ elevation: 2 }}
       >
-        drawer
+        <Sidebar />
       </Drawer>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, backgroundColor: '#F6F6F6' }}
+        sx={{ flexGrow: 1, p: 3, backgroundColor: '#EEEEEE' }}
       >
         {children}
       </Box>
